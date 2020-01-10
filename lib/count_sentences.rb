@@ -16,7 +16,9 @@ class String
 
   def count_sentences
     # binding.pry
-    string_split = self.strip.split(/[.!?]+(?=\s|\z)/)  #(/(\.|\?|\!)/)
+    string_split = self.strip.split(/[.!?]+(?=\s|\z)/)  
+    #(?=\s|\z)/) is a positive lookahead, requiring the match 
+    #to be immediately followed by a whitespace character or the end of the string.
     string_split.length
   end
   
